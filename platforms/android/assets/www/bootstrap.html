@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport"
+	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+<link rel="stylesheet" href="css/bootstrap-theme.css" />
+<link rel="stylesheet" href="css/bootstrap.css" />
+<!-- <link rel="stylesheet" href="css/index.css" /> -->
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<title>Phonegap</title>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<ul class="nav nav-pills pull-right">
+				<li><a href="/">Início</a></li>
+				<li><a href="/sobre">Sobre</a></li>
+			</ul>
+			<h3 class="text-muted">Agenda de Contatos</h3>
+		</div>
+		
+		<div class="panel-group" id="accordion">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Um</a>
+					</h4>
+				</div>
+				<div id="collapseOne" class="panel-collapse collpase">
+					<div class="panel-body">
+						Lorem ipsum...
+					</div>
+				</div>
+			</div>
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Dois</a>
+					</h4>
+				</div>
+				<div id="collapseTwo" class="panel-collapse collpase">
+					<div class="panel-body">
+						Lorem ipsum...
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row marketing">
+			<div class="topo-table">
+				<a href="/contatos/novo" class="btn btn-success" title="Novo"><span
+					class="glyphicon glyphicon-plus"></span></a>
+
+				<div class="btn-group" title="Quantidades por Página">
+					<button type="button" class="btn btn-default">005</button>
+					<button type="button" class="btn btn-default dropdown-toggle"
+						data-toggle="dropdown">
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu pull-right" style="min-width: 75px"
+						role="menu">
+						<li class="active"><a href="#">005</a></li>
+						<li><a href="#">010</a></li>
+						<li><a href="#">025</a></li>
+						<li><a href="#">050</a></li>
+						<li><a href="#">100</a></li>
+					</ul>
+				</div>
+
+				<form class="form-inline pull-right" role="form">
+					<div class="form-group">
+						<label class="sr-only" for="localizar">Buscar...</label> <input
+							type="search" class="form-control" id="localizar"
+							placeholder="Bucar...">
+					</div>
+					<button type="submit" class="btn btn-default">
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
+				</form>
+			</div>
+
+			<br>
+
+			<div class="corpo-table">
+				<table class="table table-striped table-bordered table-hover">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Nome</th>
+							<th>Tel. Principal</th>
+							<th>Tel. Qua.</th>
+							<th>Data Criação</th>
+							<th>Ação</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Fortaleza Ceará Brasil</td>
+							<td>(085)85858585</td>
+							<td class="text-center">2</td>
+							<td>3/31/14</td>
+							<td><a class="btn btn-xs btn-info" title="Visualizar"
+								href="/contatos/detalhes/1"><span
+									class="glyphicon glyphicon-new-window"></span></a> <a
+								class="btn btn-xs btn-warning" title="Editar"
+								href="/contatos/editar/1"><span
+									class="glyphicon glyphicon-edit"></span></a> <a
+								class="btn btn-xs btn-danger" title="Deletar"
+								href="/contatos/deletar/1"><span
+									class="glyphicon glyphicon-floppy-remove"></span></a></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Fortaleza Ceará Brasil</td>
+							<td>(085)85858585</td>
+							<td class="text-center">2</td>
+							<td>3/31/14</td>
+							<td><a class="btn btn-xs btn-info" title="Visualizar"
+								href="/contatos/detalhes/2"><span
+									class="glyphicon glyphicon-new-window"></span></a> <a
+								class="btn btn-xs btn-warning" title="Editar"
+								href="/contatos/editar/2"><span
+									class="glyphicon glyphicon-edit"></span></a> <a
+								class="btn btn-xs btn-danger" title="Deletar"
+								href="/contatos/deletar/2"><span
+									class="glyphicon glyphicon-floppy-remove"></span></a></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Fortaleza Ceará Brasil</td>
+							<td>(085)85858585</td>
+							<td class="text-center">2</td>
+							<td>3/31/14</td>
+							<td><a class="btn btn-xs btn-info" title="Visualizar"
+								href="/contatos/detalhes/3"><span
+									class="glyphicon glyphicon-new-window"></span></a> <a
+								class="btn btn-xs btn-warning" title="Editar"
+								href="/contatos/editar/3"><span
+									class="glyphicon glyphicon-edit"></span></a> <a
+								class="btn btn-xs btn-danger" title="Deletar"
+								href="/contatos/deletar/3"><span
+									class="glyphicon glyphicon-floppy-remove"></span></a></td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>Fortaleza Ceará Brasil</td>
+							<td>(085)85858585</td>
+							<td class="text-center">2</td>
+							<td>3/31/14</td>
+							<td><a class="btn btn-xs btn-info" title="Visualizar"
+								href="/contatos/detalhes/4"><span
+									class="glyphicon glyphicon-new-window"></span></a> <a
+								class="btn btn-xs btn-warning" title="Editar"
+								href="/contatos/editar/4"><span
+									class="glyphicon glyphicon-edit"></span></a> <a
+								class="btn btn-xs btn-danger" title="Deletar"
+								href="/contatos/deletar/4"><span
+									class="glyphicon glyphicon-floppy-remove"></span></a></td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>Fortaleza Ceará Brasil</td>
+							<td>(085)85858585</td>
+							<td class="text-center">2</td>
+							<td>3/31/14</td>
+							<td><a class="btn btn-xs btn-info" title="Visualizar"
+								href="/contatos/detalhes/5"><span
+									class="glyphicon glyphicon-new-window"></span></a> <a
+								class="btn btn-xs btn-warning" title="Editar"
+								href="/contatos/editar/5"><span
+									class="glyphicon glyphicon-edit"></span></a> <a
+								class="btn btn-xs btn-danger" title="Deletar"
+								href="/contatos/deletar/5"><span
+									class="glyphicon glyphicon-floppy-remove"></span></a></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<ul class="pagination pull-right">
+					<li><a href="#">Anterior</a></li>
+					<li class="active"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">Próximo</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+		<div class="footer">
+			<p class="muted credit pull-left">
+				Company <a href="">© 2013</a>
+			</p>
+			<p class="muted credit pull-right">
+				Desenvolvido por <a href="http://igorrocha.com.br">Igor Rocha</a>.
+			</p>
+		</div>
+	</div>
+	<!-- /page -->
+
+<!-- 	<script type="text/javascript" src="phonegap.js"></script> -->
+<!-- 	<script type="text/javascript" src="js/index.js"></script> -->
+	<script type="text/javascript">
+	
+		$('.collapse').collapse();
+// 		document.addEventListener("deviceready", onDeviceReady, false);
+
+// 		function onDeviceReady() {
+// 			var options = new ContactFindOptions();
+// 			options.filter = "";
+// 			options.multiple = true;
+// 			var fields = [ "displayName", "name", "phoneNumbers" ];
+// 			navigator.contacts.find(fields, onSuccess, onError, options);
+
+// 			var element = document.getElementById('device');
+// 			element.innerHTML = '<div data-role="collapsible" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-inset="false">'
+// 					+ '<h2>Detalhes do Device</h2>'
+// 					+ '<ul data-role="listview"><li>Device Model: '
+// 					+ device.model
+// 					+ '</li>'
+// 					+ '<li>Device Cordova: '
+// 					+ device.cordova
+// 					+ '</li>'
+// 					+ '<li>Device Platform: '
+// 					+ device.platform
+// 					+ '</li>'
+// 					+ '<li>Device UUID: '
+// 					+ device.uuid
+// 					+ '</li>'
+// 					+ '<li>Device Version: '
+// 					+ device.version + '</li></ul></div>';
+// 			$('[data-role=collapsible]').collapsible().trigger('create');
+// 		}
+
+// 		function onSuccess(contacts) {
+// 			var html = '';
+// 			for (var i = 0; i < contacts.length; i++) {
+// 				if (i < 10) {
+// 					html += '<div data-role="collapsible" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-inset="false">';
+// 					html += '<h2>' + contacts[i].displayName + '</h2>';
+// 					html += '<ul data-role="listview">'
+// 					html += '</ul>';
+// 					html += '</div>';
+// 				}
+
+// 			}
+// 			$('#cont').html(html);
+
+// 		}
+// 		function onError(contactError) {
+// 			alert('onError!');
+// 		}
+
+// 		app.initialize();
+	</script>
+</body>
+</html>

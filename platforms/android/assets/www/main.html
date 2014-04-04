@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport"
+	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+<link rel="stylesheet"
+	href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script
+	src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+
+<title>Phonegap</title>
+</head>
+<body>
+	<div id="contactsPage" data-role="page">
+		<div data-role="header">
+			<h1>Show My Contacts</h1>
+		</div>
+		<!-- /header -->
+
+		<div data-role="content">
+			<div id="contactsList">
+				<div data-role="collapsible" data-collapsed-icon="arrow-r"
+					data-expanded-icon="arrow-d" data-inset="false">
+					<h2>Opções</h2>
+					<ul data-role="listview">
+						<li><a href="#" onclick="showAlert(); return false;">Show
+								Alert</a></li>
+						<li><a href="#" onclick="showConfirm(); return false;">Show
+								Confirmation</a></li>
+						<li><a href="#" onclick="playBeep(); return false;">Play
+								Beep</a></li>
+						<li><a href="#" onclick="vibrate(); return false;">Vibrate</a></li>
+						<li><a href="#" onclick="camera(); return false;">Camera</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="device"></div>
+
+			<div id="cont"></div>
+		</div>
+		<!-- /content -->
+	</div>
+	<!-- /page -->
+
+	<script type="text/javascript" src="phonegap.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript">
+		document.addEventListener("deviceready", onDeviceReady, false);
+
+		function onDeviceReady() {
+
+			var element = document.getElementById('device');
+			element.innerHTML = '<div data-role="collapsible" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-inset="false">'
+					+ '<h2>Detalhes do Device</h2>'
+					+ '<ul data-role="listview"><li>Device Model: '
+					+ device.model
+					+ '</li>'
+					+ '<li>Device Cordova: '
+					+ device.cordova
+					+ '</li>'
+					+ '<li>Device Platform: '
+					+ device.platform
+					+ '</li>'
+					+ '<li>Device UUID: '
+					+ device.uuid
+					+ '</li>'
+					+ '<li>Device Version: '
+					+ device.version + '</li></ul></div>';
+		}
+
+		function showAlert() {
+			navigator.notification.alert('Bem Vindo!', // message
+			alertCallback, // callback
+			'MobGap', // title
+			'Ok!' // buttonName
+			);
+		}
+
+		function alertCallback() {
+			// nothing
+		}
+
+		function onConfirm(button) { 
+			alert('Você selecionou o botão' + button);
+		}
+
+		function showConfirm() {
+			navigator.notification.confirm('Deseja Continuar?', // message
+				onConfirm, // callback to invoke with index of button pressed
+				'Confirmar', // title
+				'Sim,Não' // buttonLabels
+			);
+		}
+		function playBeep() {
+			navigator.notification.beep(1);
+		}
+
+		function vibrate() {
+			navigator.notification.vibrate(2000); // Vibra por 2 segundos
+		}
+		
+		function camera() {
+			navigator.camera.getPicture(onSuccess, onFail, { quality: 50, destinationType:
+				destinationType.FILE_URI, sourceType:pictureSource.SAVEDPHOTOALBUM });
+		}
+				
+		function onSuccess(imgUri) {
+			var image = document.getElementById('camera_image');
+			image.src = imageUri;
+		}
+		
+		function onFail(message) {
+			alert('Failed because: ' + message);
+		}
+
+		app.initialize();
+	</script>
+</body>
+</html>
